@@ -1,0 +1,1003 @@
+[gd_scene load_steps=71 format=2]
+
+[ext_resource path="res://default_env.tres" type="Environment" id=1]
+[ext_resource path="res://FBX format/house_type01.fbx" type="PackedScene" id=2]
+[ext_resource path="res://FBX format/house_type02.fbx" type="PackedScene" id=3]
+[ext_resource path="res://FBX format/house_type03.fbx" type="PackedScene" id=4]
+[ext_resource path="res://FBX format/house_type04.fbx" type="PackedScene" id=5]
+[ext_resource path="res://FBX format/house_type05.fbx" type="PackedScene" id=6]
+[ext_resource path="res://White Icons/arrowDown.png" type="Texture" id=7]
+[ext_resource path="res://FBX format/house_type07.fbx" type="PackedScene" id=8]
+[ext_resource path="res://FBX format/house_type08.fbx" type="PackedScene" id=9]
+[ext_resource path="res://FBX format/house_type11.fbx" type="PackedScene" id=10]
+[ext_resource path="res://FBX format/house_type12.fbx" type="PackedScene" id=11]
+[ext_resource path="res://FBX format/house_type10.fbx" type="PackedScene" id=12]
+[ext_resource path="res://FBX format/house_type09.fbx" type="PackedScene" id=13]
+[ext_resource path="res://FBX format/house_type18.fbx" type="PackedScene" id=14]
+[ext_resource path="res://FBX format/house_type15.fbx" type="PackedScene" id=15]
+[ext_resource path="res://FBX format/house_type21.fbx" type="PackedScene" id=16]
+[ext_resource path="res://FBX format/house_type17.fbx" type="PackedScene" id=17]
+[ext_resource path="res://FBX format/house_type20.fbx" type="PackedScene" id=18]
+[ext_resource path="res://White Icons/arrowUp.png" type="Texture" id=19]
+[ext_resource path="res://FBX format/house_type14.fbx" type="PackedScene" id=20]
+[ext_resource path="res://FBX format/house_type16.fbx" type="PackedScene" id=21]
+[ext_resource path="res://Car.gd" type="Script" id=22]
+[ext_resource path="res://FBX format/tree_large.fbx" type="PackedScene" id=23]
+[ext_resource path="res://FBX format/tree_small.fbx" type="PackedScene" id=24]
+[ext_resource path="res://FBX format/fence_wide.fbx" type="PackedScene" id=25]
+[ext_resource path="res://FBX format/fence_open.fbx" type="PackedScene" id=26]
+[ext_resource path="res://FBX format/fence_rectangle.fbx" type="PackedScene" id=27]
+[ext_resource path="res://FBX format/fence_small.fbx" type="PackedScene" id=28]
+[ext_resource path="res://FBX format/fence_large.fbx" type="PackedScene" id=29]
+[ext_resource path="res://FBX format/driveway_long.fbx" type="PackedScene" id=30]
+[ext_resource path="res://garbage truck.fbx" type="PackedScene" id=31]
+[ext_resource path="res://White Icons/arrowLeft.png" type="Texture" id=32]
+[ext_resource path="res://White Icons/arrowRight.png" type="Texture" id=33]
+[ext_resource path="res://White Icons/minus.png" type="Texture" id=34]
+[ext_resource path="res://White Icons/plus.png" type="Texture" id=35]
+[ext_resource path="res://UIControl.gd" type="Script" id=36]
+[ext_resource path="res://White Icons/warning.png" type="Texture" id=37]
+[ext_resource path="res://White Icons/trashcan.png" type="Texture" id=38]
+[ext_resource path="res://trashcanOpen.png" type="Texture" id=39]
+[ext_resource path="res://garbage.tscn" type="PackedScene" id=40]
+[ext_resource path="res://trashcan.png" type="Texture" id=41]
+[ext_resource path="res://dumpArea.gd" type="Script" id=42]
+
+[sub_resource type="BoxShape" id=1]
+extents = Vector3( 0.175729, 0.182883, 0.531274 )
+
+[sub_resource type="BoxShape" id=2]
+extents = Vector3( 9.20715, 1.38767, 1.65845 )
+
+[sub_resource type="BoxShape" id=3]
+extents = Vector3( 0.711476, 0.635502, 0.985038 )
+
+[sub_resource type="SpriteFrames" id=4]
+animations = [ {
+"frames": [ ExtResource( 41 ), ExtResource( 39 ) ],
+"loop": true,
+"name": "default",
+"speed": 1.0
+} ]
+
+[sub_resource type="BoxShape" id=5]
+extents = Vector3( 9.90479, 0.400403, 1.06225 )
+
+[sub_resource type="CubeMesh" id=6]
+
+[sub_resource type="SpatialMaterial" id=7]
+albedo_color = Color( 0.141176, 0.439216, 0.298039, 1 )
+
+[sub_resource type="BoxShape" id=8]
+extents = Vector3( 1.25155, 0.525235, 1.37524 )
+
+[sub_resource type="BoxShape" id=9]
+extents = Vector3( 1.17422, 0.494023, 1.48981 )
+
+[sub_resource type="BoxShape" id=10]
+extents = Vector3( 1.27494, 0.532968, 1.5792 )
+
+[sub_resource type="BoxShape" id=11]
+extents = Vector3( 0.998579, 0.531146, 1.35683 )
+
+[sub_resource type="BoxShape" id=12]
+extents = Vector3( 1.08921, 0.44117, 9.84513 )
+
+[sub_resource type="BoxShape" id=13]
+extents = Vector3( 1.31134, 0.574378, 1.29024 )
+
+[sub_resource type="BoxShape" id=14]
+extents = Vector3( 1.23762, 0.375198, 1.13412 )
+
+[sub_resource type="BoxShape" id=15]
+extents = Vector3( 1.21834, 0.559272, 1.64389 )
+
+[sub_resource type="BoxShape" id=16]
+extents = Vector3( 1.18662, 0.471584, 1.29678 )
+
+[sub_resource type="BoxShape" id=17]
+extents = Vector3( 1.29783, 0.540429, 1.29621 )
+
+[sub_resource type="BoxShape" id=18]
+extents = Vector3( 1.33136, 0.533688, 1.039 )
+
+[sub_resource type="BoxShape" id=19]
+extents = Vector3( 1.31272, 0.473452, 1.56744 )
+
+[sub_resource type="BoxShape" id=20]
+extents = Vector3( 1.25314, 0.552645, 1.2299 )
+
+[sub_resource type="BoxShape" id=21]
+extents = Vector3( 1.27957, 0.447799, 1.12435 )
+
+[sub_resource type="BoxShape" id=22]
+extents = Vector3( 1.27247, 0.364368, 1.53677 )
+
+[sub_resource type="BoxShape" id=23]
+extents = Vector3( 0.883192, 0.335802, 1.33015 )
+
+[sub_resource type="BoxShape" id=24]
+extents = Vector3( 0.976163, 0.483495, 2.22601 )
+
+[sub_resource type="BoxShape" id=25]
+extents = Vector3( 0.913544, 0.539788, 1.75078 )
+
+[sub_resource type="BoxShape" id=26]
+extents = Vector3( 0.815725, 0.413683, 9.77291 )
+
+[sub_resource type="CubeMesh" id=27]
+
+[sub_resource type="SpatialMaterial" id=28]
+flags_disable_ambient_light = true
+albedo_color = Color( 0.12549, 0.145098, 0.192157, 1 )
+
+[node name="Spatial" type="Spatial"]
+
+[node name="Control" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -0.5
+margin_bottom = -0.5
+script = ExtResource( 36 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Space Button" type="Button" parent="Control"]
+margin_right = 72.0
+margin_bottom = 56.0
+disabled = true
+button_mask = 0
+text = "0"
+icon = ExtResource( 38 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Warning Indicator" type="Button" parent="Control"]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -92.0
+margin_bottom = 56.0
+disabled = true
+button_mask = 0
+text = "0"
+icon = ExtResource( 37 )
+flat = true
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Acceleration Buttons" type="VSplitContainer" parent="Control"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -62.0
+margin_top = -124.0
+collapsed = true
+dragger_visibility = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="UpButton" type="Button" parent="Control/Acceleration Buttons"]
+margin_right = 62.0
+margin_bottom = 56.0
+icon = ExtResource( 19 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DownButton" type="Button" parent="Control/Acceleration Buttons"]
+margin_top = 68.0
+margin_right = 62.0
+margin_bottom = 124.0
+icon = ExtResource( 7 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Direction Buttons" type="HSplitContainer" parent="Control"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -68.0
+margin_top = -56.0
+margin_right = 68.0
+collapsed = true
+dragger_visibility = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LeftButton" type="Button" parent="Control/Direction Buttons"]
+margin_right = 62.0
+margin_bottom = 56.0
+hint_tooltip = "Turns The Car Left"
+action_mode = 0
+button_mask = 7
+icon = ExtResource( 32 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RightButton" type="Button" parent="Control/Direction Buttons"]
+margin_left = 74.0
+margin_right = 136.0
+margin_bottom = 56.0
+hint_tooltip = "Turns The Car Right"
+action_mode = 0
+button_mask = 7
+icon = ExtResource( 33 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Camera Control" type="VBoxContainer" parent="Control"]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_top = -116.0
+margin_right = 62.0
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Plus Button" type="Button" parent="Control/Camera Control"]
+margin_right = 62.0
+margin_bottom = 56.0
+action_mode = 0
+button_mask = 7
+icon = ExtResource( 35 )
+flat = true
+
+[node name="Minus Button" type="Button" parent="Control/Camera Control"]
+margin_top = 60.0
+margin_right = 62.0
+margin_bottom = 116.0
+icon = ExtResource( 34 )
+flat = true
+
+[node name="Garbage Points" type="Spatial" parent="."]
+
+[node name="1" type="Spatial" parent="Garbage Points"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8.0339, 0, -2.2587 )
+
+[node name="garbage3" parent="Garbage Points/1" instance=ExtResource( 40 )]
+transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -0.44662, 0.0605895, 0.23356 )
+
+[node name="2" type="Spatial" parent="Garbage Points"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8.0339, 0, 2.42935 )
+
+[node name="garbage3" parent="Garbage Points/2" instance=ExtResource( 40 )]
+transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -0.44662, 0.0605895, 0.23356 )
+
+[node name="3" type="Spatial" parent="Garbage Points"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8.0339, 0, 6.43426 )
+
+[node name="garbage3" parent="Garbage Points/3" instance=ExtResource( 40 )]
+transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -0.44662, 0.0605895, 0.23356 )
+
+[node name="4" type="Spatial" parent="Garbage Points"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.37449, 0, -2.24934 )
+
+[node name="garbage3" parent="Garbage Points/4" instance=ExtResource( 40 )]
+transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -0.44662, 0.0605895, 0.23356 )
+
+[node name="5" type="Spatial" parent="Garbage Points"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.37449, 0, 2.49909 )
+
+[node name="garbage3" parent="Garbage Points/5" instance=ExtResource( 40 )]
+transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -0.44662, 0.0605895, 0.23356 )
+
+[node name="6" type="Spatial" parent="Garbage Points"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.37449, 0, 6.4276 )
+
+[node name="garbage3" parent="Garbage Points/6" instance=ExtResource( 40 )]
+transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -0.44662, 0.0605895, 0.23356 )
+
+[node name="7" type="Spatial" parent="Garbage Points"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.954085, 0, -2.0565 )
+
+[node name="garbage3" parent="Garbage Points/7" instance=ExtResource( 40 )]
+transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -0.44662, 0.0605895, 0.23356 )
+
+[node name="8" type="Spatial" parent="Garbage Points"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.954085, 0, 2.56048 )
+
+[node name="garbage3" parent="Garbage Points/8" instance=ExtResource( 40 )]
+transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -0.44662, 0.0605895, 0.23356 )
+
+[node name="9" type="Spatial" parent="Garbage Points"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.954085, 0, 6.45612 )
+
+[node name="garbage3" parent="Garbage Points/9" instance=ExtResource( 40 )]
+transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -0.44662, 0.0605895, 0.23356 )
+
+[node name="10" type="Spatial" parent="Garbage Points"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.40782, 0, -2.16308 )
+
+[node name="garbage3" parent="Garbage Points/10" instance=ExtResource( 40 )]
+transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -0.44662, 0.0605895, 0.23356 )
+
+[node name="11" type="Spatial" parent="Garbage Points"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.40782, 0, 2.59676 )
+
+[node name="garbage3" parent="Garbage Points/11" instance=ExtResource( 40 )]
+transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -0.44662, 0.0605895, 0.23356 )
+
+[node name="12" type="Spatial" parent="Garbage Points"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.40782, 0, 6.45733 )
+
+[node name="garbage3" parent="Garbage Points/12" instance=ExtResource( 40 )]
+transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -0.44662, 0.0605895, 0.23356 )
+
+[node name="13" type="Spatial" parent="Garbage Points"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.12603, 0, -2.33633 )
+
+[node name="garbage3" parent="Garbage Points/13" instance=ExtResource( 40 )]
+transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -0.44662, 0.0605895, 0.23356 )
+
+[node name="14" type="Spatial" parent="Garbage Points"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8.65261, 0, 0.280461 )
+
+[node name="garbage3" parent="Garbage Points/14" instance=ExtResource( 40 )]
+transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -0.44662, 0.0605895, 0.23356 )
+
+[node name="15" type="Spatial" parent="Garbage Points"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8.65261, 0, 6.32936 )
+
+[node name="garbage3" parent="Garbage Points/15" instance=ExtResource( 40 )]
+transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -0.44662, 0.0605895, 0.23356 )
+
+[node name="Main Camera" type="Camera" parent="."]
+transform = Transform( 0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, -0.75, 0.433013, 7, 20, 12 )
+environment = ExtResource( 1 )
+current = true
+fov = 45.0
+far = 545.8
+
+[node name="Car" type="RigidBody" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.87532, 0.43994, -4.54872 )
+gravity_scale = 0.0
+continuous_cd = true
+can_sleep = false
+axis_lock_linear_y = true
+axis_lock_angular_x = true
+axis_lock_angular_z = true
+script = ExtResource( 22 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Car"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.128255, 0.123885 )
+shape = SubResource( 1 )
+
+[node name="garbage truck" parent="Car" instance=ExtResource( 31 )]
+transform = Transform( -0.15, 0, -1.31134e-08, 0, 0.15, 0, 1.31134e-08, 0, -0.15, 0, -0.384285, 0.251741 )
+
+[node name="DirectionalLight" type="DirectionalLight" parent="."]
+transform = Transform( 0.85995, 0.400676, -0.31614, 0, 0.619423, 0.785058, 0.510378, -0.675111, 0.532673, 0, 13.0458, 0 )
+light_color = Color( 0.901961, 0.913725, 0.784314, 1 )
+light_bake_mode = 2
+shadow_enabled = true
+directional_shadow_blend_splits = true
+directional_shadow_normal_bias = 0.0
+directional_shadow_depth_range = 1
+directional_shadow_max_distance = 8192.0
+
+[node name="Recycling Plant" type="StaticBody" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.92896, 0, -7.50115 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Recycling Plant"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.37433, 1.41911, 0.565124 )
+shape = SubResource( 2 )
+
+[node name="Area" type="Area" parent="Recycling Plant"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9.76699, 0.735914, 3.26583 )
+script = ExtResource( 42 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Recycling Plant/Area"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.929773, 0, 0.246419 )
+shape = SubResource( 3 )
+
+[node name="garbage" parent="Recycling Plant/Area" instance=ExtResource( 40 )]
+transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0.417423, -0.648172, -0.551075 )
+script = null
+
+[node name="garbage3" parent="Recycling Plant/Area" instance=ExtResource( 40 )]
+transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 1.32576, -0.648172, -0.551075 )
+script = null
+
+[node name="garbage4" parent="Recycling Plant/Area" instance=ExtResource( 40 )]
+transform = Transform( 0.166123, 0, 0.111369, 0, 0.2, 0, -0.111369, 0, 0.166123, 0.705676, -0.648172, -0.331485 )
+script = null
+
+[node name="garbage5" parent="Recycling Plant/Area" instance=ExtResource( 40 )]
+transform = Transform( 0.162801, -0.0444889, 0.107316, 0, 0.184753, 0.0765915, -0.116172, -0.0623458, 0.15039, 1.11769, -0.653063, -0.208123 )
+script = null
+
+[node name="garbage2" parent="Recycling Plant/Area" instance=ExtResource( 40 )]
+transform = Transform( 0.11037, 0, -0.166789, 0, 0.2, 0, 0.166789, 0, 0.11037, 0.855157, -0.648172, -0.551075 )
+script = null
+
+[node name="garbage6" parent="Recycling Plant/Area" instance=ExtResource( 40 )]
+transform = Transform( -0.0349152, 0, 0.196929, 0, 0.2, 0, -0.196929, 0, -0.0349152, 0.417423, -0.648172, -0.0590706 )
+script = null
+
+[node name="garbage7" parent="Recycling Plant/Area" instance=ExtResource( 40 )]
+transform = Transform( -0.0349152, 0, 0.196929, 0, 0.2, 0, -0.196929, 0, -0.0349152, 1.32576, -0.648172, -0.0590706 )
+script = null
+
+[node name="garbage8" parent="Recycling Plant/Area" instance=ExtResource( 40 )]
+transform = Transform( -0.13866, 0, 0.14413, 0, 0.2, 0, -0.14413, 0, -0.13866, 0.705676, -0.648172, 0.16052 )
+script = null
+
+[node name="garbage9" parent="Recycling Plant/Area" instance=ExtResource( 40 )]
+transform = Transform( -0.134089, -0.0444889, 0.141566, -0.0754153, 0.184753, -0.0133711, -0.1278, -0.0623458, -0.140642, 1.11769, -0.653063, 0.283881 )
+script = null
+
+[node name="garbage10" parent="Recycling Plant/Area" instance=ExtResource( 40 )]
+transform = Transform( 0.144959, 0, 0.137792, 0, 0.2, 0, -0.137792, 0, 0.144959, 0.855157, -0.648172, -0.0590706 )
+script = null
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="Recycling Plant/Area"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.94408, 1.17721, 0.538857 )
+cast_shadow = 0
+pixel_size = 0.015
+billboard = 1
+frames = SubResource( 4 )
+frame = 1
+playing = true
+
+[node name="house_type24" parent="Recycling Plant" instance=ExtResource( 18 )]
+transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 9.17242, 0, 0.181475 )
+
+[node name="house_type25" parent="Recycling Plant" instance=ExtResource( 18 )]
+transform = Transform( -3, 0, 0, 0, 3, 0, 0, 0, 3, 4.8573, 0, 0.181475 )
+
+[node name="Wall" type="StaticBody" parent="Recycling Plant"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.0203, 0, -2.06327 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Recycling Plant/Wall"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.49257, 0 )
+shape = SubResource( 5 )
+
+[node name="fence_rectangle" parent="Recycling Plant" instance=ExtResource( 27 )]
+transform = Transform( -1.13606e-07, 0, -10.771, 0, 1, 0, -2.599, 0, 4.70815e-07, 0.743807, 0.088, 0.602864 )
+
+[node name="Grass" type="MeshInstance" parent="Recycling Plant"]
+transform = Transform( 7.89666, 0, 0, 0, 0.00492775, 0, 0, 0, 1.49556, 4.76229, 0.0854701, 0.551626 )
+mesh = SubResource( 6 )
+material/0 = SubResource( 7 )
+
+[node name="tree_large" parent="Recycling Plant" instance=ExtResource( 23 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.48462, 0.088, 0.566193 )
+
+[node name="tree_large2" parent="Recycling Plant" instance=ExtResource( 23 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.93145, 0.088, 1.20433 )
+
+[node name="tree_small" parent="Recycling Plant" instance=ExtResource( 24 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0403, 0.088, 0.417992 )
+
+[node name="tree_small2" parent="Recycling Plant" instance=ExtResource( 24 )]
+transform = Transform( 0.999768, -0.0215357, 0, 0.0215357, 0.999768, 0, 0, 0, 1, 0.949597, 0.088, 1.563 )
+
+[node name="Street 1" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8.01648, 0.1, 3.1322 )
+
+[node name="House 1" type="StaticBody" parent="Street 1"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 5.77961 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Street 1/House 1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.206075, 0.488765, -0.266842 )
+shape = SubResource( 8 )
+
+[node name="house_type07" parent="Street 1/House 1" instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, -1, 0.118165, 0, -0.249672 )
+
+[node name="tree_small5" parent="Street 1/House 1" instance=ExtResource( 24 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.55831, -0.0122585, 0.42013 )
+
+[node name="tree_small4" parent="Street 1/House 1" instance=ExtResource( 24 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0171185, -0.0122576, 0.621207 )
+
+[node name="fence_rectangle" parent="Street 1/House 1" instance=ExtResource( 27 )]
+transform = Transform( 0.929531, 8.74228e-08, 0, -8.12622e-08, 1, 0, 0, 0, -1, 0.101414, -0.00917056, -1.03746 )
+
+[node name="Grass" type="MeshInstance" parent="Street 1/House 1"]
+transform = Transform( 0.544625, 0, 0, 0, 0.00492775, 0, 0, 0, 1.14584, 0.100234, 0, -0.264253 )
+mesh = SubResource( 6 )
+material/0 = SubResource( 7 )
+
+[node name="House 2" type="StaticBody" parent="Street 1"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.447268, 0, 1.80799 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Street 1/House 2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.221618, 0.489896, 0.0813971 )
+shape = SubResource( 9 )
+
+[node name="house_type12" parent="Street 1/House 2" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, -1, 0.146942, 0, 0.0543976 )
+
+[node name="tree_large5" parent="Street 1/House 2" instance=ExtResource( 23 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.277702, -0.0122576, -0.86605 )
+
+[node name="tree_small3" parent="Street 1/House 2" instance=ExtResource( 24 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.168343, -0.0122583, 0.985575 )
+
+[node name="Grass" type="MeshInstance" parent="Street 1/House 2"]
+transform = Transform( -5.06289e-08, 0, 0.851567, 0, 0.00492775, 0, -1.15826, 0, -3.72232e-08, 0.221433, -0.006912, 0.069787 )
+mesh = SubResource( 6 )
+material/0 = SubResource( 7 )
+
+[node name="tree_large4" parent="Street 1/House 2" instance=ExtResource( 23 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0.927726, -0.0122576, 1.08094 )
+
+[node name="House 3" type="StaticBody" parent="Street 1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0862608, 0, -2.31775 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Street 1/House 3"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.511935, -0.37389 )
+shape = SubResource( 10 )
+
+[node name="house_type10" parent="Street 1/House 3" instance=ExtResource( 12 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.22, 0.055, -0.203 )
+
+[node name="Grass" type="MeshInstance" parent="Street 1/House 3"]
+transform = Transform( 1.11983, 0, 0, 0, 0.00492775, 0, 0, 0, 1.25336, -0.246082, 0.0478845, -0.326869 )
+mesh = SubResource( 6 )
+material/0 = SubResource( 7 )
+
+[node name="tree_large" parent="Street 1/House 3" instance=ExtResource( 23 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.390585, 0.0443077, -1.12952 )
+
+[node name="tree_large2" parent="Street 1/House 3" instance=ExtResource( 23 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.352198, -0.0122576, -0.400589 )
+
+[node name="tree_large3" parent="Street 1/House 3" instance=ExtResource( 23 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.847011, -0.0122576, 0.538113 )
+
+[node name="tree_small" parent="Street 1/House 3" instance=ExtResource( 24 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.700776, -0.0122576, 0.767828 )
+
+[node name="House 4" type="StaticBody" parent="Street 1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.431938, -0.1, -7.53982 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Street 1/House 4"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.346647, 0.626523, 0.390924 )
+shape = SubResource( 11 )
+
+[node name="house_type02" parent="Street 1/House 4" instance=ExtResource( 3 )]
+transform = Transform( -1, 0, 0, 0, 1, 0, 0, 0, 1, -0.244, 0.088, 0.01 )
+
+[node name="tree_large5" parent="Street 1/House 4" instance=ExtResource( 23 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.163582, 0.0877424, 1.14287 )
+
+[node name="tree_small" parent="Street 1/House 4" instance=ExtResource( 24 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.325831, 0.0877424, 1.27448 )
+
+[node name="fence_rectangle" parent="Street 1/House 4" instance=ExtResource( 27 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.251577, 0.0877424, 1.04928 )
+
+[node name="Grass" type="MeshInstance" parent="Street 1/House 4"]
+transform = Transform( -4.41817e-08, 0, 0.688563, 0, 0.00492775, 0, -1.01076, 0, -3.0098e-08, -0.14205, 0.088, 0.415746 )
+mesh = SubResource( 6 )
+material/0 = SubResource( 7 )
+
+[node name="Wall" type="StaticBody" parent="Street 1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -1 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Street 1/Wall"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.351567, 0.415318, -1.85388 )
+shape = SubResource( 12 )
+
+[node name="Street 2" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.82385, 0, 4.24303 )
+
+[node name="House 1" type="StaticBody" parent="Street 2"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.327931, 0, 4.37845 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Street 2/House 1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00549316, 0.668221, 0.274585 )
+shape = SubResource( 13 )
+
+[node name="house_type03" parent="Street 2/House 1" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, -1, -0.044, 0.088, 0.065 )
+
+[node name="fence_open" parent="Street 2/House 1" instance=ExtResource( 26 )]
+transform = Transform( 1.2888, 0, 0, 0, 1, 0, 0, 0, 1, -0.0859704, 0.0877424, 0.842834 )
+
+[node name="tree_small" parent="Street 2/House 1" instance=ExtResource( 24 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.606187, 0.0877422, 0.753835 )
+
+[node name="tree_large" parent="Street 2/House 1" instance=ExtResource( 23 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.45687, 0.0877424, -0.585937 )
+
+[node name="tree_large2" parent="Street 2/House 1" instance=ExtResource( 23 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0140805, 0.0877422, -0.594092 )
+
+[node name="Grass" type="MeshInstance" parent="Street 2/House 1"]
+transform = Transform( 1.01076, 0, 0, 0, 0.00492775, 0, 0, 0, 1.03801, -0.0222282, 0.107682, 0.281741 )
+mesh = SubResource( 6 )
+material/0 = SubResource( 7 )
+
+[node name="House 2" type="StaticBody" parent="Street 2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.330335 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Street 2/House 2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0525172, 0.469619, 0.0945549 )
+shape = SubResource( 14 )
+
+[node name="house_type01" parent="Street 2/House 2" instance=ExtResource( 2 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, -1, 0, 4.37114e-08, 0.0949998, 0.088, -0.519958 )
+
+[node name="fence_open" parent="Street 2/House 2" instance=ExtResource( 26 )]
+transform = Transform( -4.09057e-08, 0, 1, 0, 1, 0, -0.935813, 0, -4.37114e-08, 0.430456, 0.0877424, 0.126303 )
+
+[node name="tree_large" parent="Street 2/House 2" instance=ExtResource( 23 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.458787, 0.0877424, 0.421046 )
+
+[node name="Grass" type="MeshInstance" parent="Street 2/House 2"]
+transform = Transform( 0.948604, 0, 0, 0, 0.00492775, 0, 0, 0, 0.533381, -0.128073, 0.0890986, 0.130312 )
+mesh = SubResource( 6 )
+material/0 = SubResource( 7 )
+
+[node name="House 3" type="StaticBody" parent="Street 2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2.66609 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Street 2/House 3"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.048198, 0.651393, -1.17038 )
+shape = SubResource( 15 )
+
+[node name="house_type08" parent="Street 2/House 3" instance=ExtResource( 9 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0560002, 0.088, -1.03589 )
+
+[node name="fence_wide" parent="Street 2/House 3" instance=ExtResource( 25 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 2.52319, 0.00637817, 0.0877424, -0.0911176 )
+
+[node name="fence_open" parent="Street 2/House 3" instance=ExtResource( 26 )]
+transform = Transform( 1.30306, 8.74228e-08, 0, -1.13917e-07, 1, 0, 0, 0, -1, -0.00702, 0.0877422, -1.76666 )
+
+[node name="tree_large" parent="Street 2/House 3" instance=ExtResource( 23 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.522588, 0.0877424, 0.147735 )
+
+[node name="tree_small" parent="Street 2/House 3" instance=ExtResource( 24 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.490742, 0.0877422, -0.296064 )
+
+[node name="tree_small2" parent="Street 2/House 3" instance=ExtResource( 24 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.350957, 0.0877422, 0.135968 )
+
+[node name="tree_small3" parent="Street 2/House 3" instance=ExtResource( 24 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.551877, 0.0877424, -1.86329 )
+
+[node name="Grass" type="MeshInstance" parent="Street 2/House 3"]
+transform = Transform( 0.746204, 0, 0, 0, 0.00492775, 0, 0, 0, 1.39885, 0.0122852, 0.0913794, -1.04532 )
+mesh = SubResource( 6 )
+material/0 = SubResource( 7 )
+
+[node name="House 4" type="StaticBody" parent="Street 2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0766644, 0.283775, -8.24564 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Street 2/House 4"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.110161, 0.37202, 0.00512409 )
+shape = SubResource( 16 )
+
+[node name="house_type14" parent="Street 2/House 4" instance=ExtResource( 20 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.129649, -0.183776, 0.0205114 )
+
+[node name="tree_large2" parent="Street 2/House 4" instance=ExtResource( 23 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.485039, -0.196032, 1.04195 )
+
+[node name="tree_small7" parent="Street 2/House 4" instance=ExtResource( 24 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.135509, -0.196033, 0.956807 )
+
+[node name="tree_small8" parent="Street 2/House 4" instance=ExtResource( 24 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.221608, -0.196032, 0.781431 )
+
+[node name="fence_rectangle" parent="Street 2/House 4" instance=ExtResource( 27 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.116436, -0.15, 0.821434 )
+
+[node name="Grass" type="MeshInstance" parent="Street 2/House 4"]
+transform = Transform( -4.41817e-08, 0, 0.57162, 0, 0.00492775, 0, -1.01076, 0, -2.49863e-08, -0.123707, -0.185476, 0.190917 )
+mesh = SubResource( 6 )
+material/0 = SubResource( 7 )
+
+[node name="Street 3" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0181, 0, 4.07022 )
+
+[node name="House 1" type="StaticBody" parent="Street 3"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.474983, 0.327563, 5.05209 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Street 3/House 1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0779114, 0.313094, -0.429825 )
+shape = SubResource( 17 )
+
+[node name="house_type22" parent="Street 3/House 1" instance=ExtResource( 16 )]
+transform = Transform( -0.999014, 0, -0.0444041, 0, 1, 0, 0.0444041, 0, -0.999014, -0.504096, -0.222103, -0.0138936 )
+
+[node name="house_type21" parent="Street 3/House 1" instance=ExtResource( 16 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, -1, 0.488896, -0.222103, -0.0138941 )
+
+[node name="tree_large" parent="Street 3/House 1" instance=ExtResource( 23 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.460941, -0.239821, -0.791846 )
+
+[node name="tree_large2" parent="Street 3/House 1" instance=ExtResource( 23 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.274267, -0.239821, -0.801151 )
+
+[node name="fence_wide" parent="Street 3/House 1" instance=ExtResource( 25 )]
+transform = Transform( 1.08436, 1.50996e-07, 0, -1.63735e-07, 1, 0, 0, 0, -2, -0.0101709, -0.239821, -0.798707 )
+
+[node name="Grass" type="MeshInstance" parent="Street 3/House 1"]
+transform = Transform( 0.837231, 0, 0, 0, 0.00492775, 0, 0, 0, 0.871168, -0.011044, -0.234835, -0.252658 )
+mesh = SubResource( 6 )
+material/0 = SubResource( 7 )
+
+[node name="House 2" type="StaticBody" parent="Street 3"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.510968, 0.225058, 0.509136 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Street 3/House 2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.10881, 0.42934, 0.126266 )
+shape = SubResource( 18 )
+
+[node name="house_type17" parent="Street 3/House 2" instance=ExtResource( 17 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.142762, -0.125059, 0.0196524 )
+
+[node name="tree_large3" parent="Street 3/House 2" instance=ExtResource( 23 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.351619, -0.137058, 0.808363 )
+
+[node name="tree_large4" parent="Street 3/House 2" instance=ExtResource( 23 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.701475, -0.137316, 0.558901 )
+
+[node name="Grass" type="MeshInstance" parent="Street 3/House 2"]
+transform = Transform( 1.01076, 0, 0, 0, 0.00492775, 0, 0, 0, 0.864046, -0.150932, -0.135611, 0.112362 )
+mesh = SubResource( 6 )
+material/0 = SubResource( 7 )
+
+[node name="House 3" type="StaticBody" parent="Street 3"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.304396, 0, -3.28268 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Street 3/House 3"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.333512, 0.603095, -0.364822 )
+shape = SubResource( 19 )
+
+[node name="house_type11" parent="Street 3/House 3" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.24, 0.088, 0 )
+
+[node name="tree_small2" parent="Street 3/House 3" instance=ExtResource( 24 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.058453, 0.087742, 0.68257 )
+
+[node name="tree_small3" parent="Street 3/House 3" instance=ExtResource( 24 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.735411, 0.0877424, 0.658759 )
+
+[node name="tree_large6" parent="Street 3/House 3" instance=ExtResource( 23 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.881473, 0.087742, -0.860258 )
+
+[node name="fence_wide" parent="Street 3/House 3" instance=ExtResource( 25 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -1.0688, 0.0879817, -0.305098 )
+
+[node name="Grass" type="MeshInstance" parent="Street 3/House 3"]
+transform = Transform( 1.01856, 0, 0, 0, 0.00496577, 0, 0, 0, 0.973746, -0.217609, 0.0908435, -0.0860831 )
+mesh = SubResource( 6 )
+material/0 = SubResource( 7 )
+
+[node name="Wall" type="StaticBody" parent="Street 3"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.62755, 0.1, 6.40938 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Street 3/Wall"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.192967, 0.415318, -1.85388 )
+shape = SubResource( 12 )
+
+[node name="Street 4" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.42991, 0, 3.14545 )
+
+[node name="House 1" type="StaticBody" parent="Street 4"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.267807, 0.297065, 5.46955 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Street 4/House 1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0485573, 0.359687, -0.0130959 )
+shape = SubResource( 20 )
+
+[node name="fence_rectangle" parent="Street 4/House 1" instance=ExtResource( 27 )]
+transform = Transform( -5.37775e-08, 0, 0.999598, 0, 0.999598, 0, -1.23029, 0, -4.36938e-08, 0.629392, -0.20134, 0.283224 )
+
+[node name="house_type18" parent="Street 4/House 1" instance=ExtResource( 14 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.342995, -0.197066, 0.603771 )
+
+[node name="tree_small2" parent="Street 4/House 1" instance=ExtResource( 24 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.107375, -0.209323, -0.294922 )
+
+[node name="tree_small3" parent="Street 4/House 1" instance=ExtResource( 24 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.631281, -0.209323, -0.295881 )
+
+[node name="Grass" type="MeshInstance" parent="Street 4/House 1"]
+transform = Transform( 1.01076, 0, 0, 0, 0.00492775, 0, 0, 0, 0.688563, -0.0109887, -0.200027, 0.271327 )
+mesh = SubResource( 6 )
+material/0 = SubResource( 7 )
+
+[node name="House 2" type="StaticBody" parent="Street 4"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.307121, 0.23733, 1.72111 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Street 4/House 2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0170317, 0.302795, -0.154512 )
+shape = SubResource( 21 )
+
+[node name="fence_small" parent="Street 4/House 2" instance=ExtResource( 28 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.859477, -0.149588, -0.0374393 )
+
+[node name="fence_small2" parent="Street 4/House 2" instance=ExtResource( 28 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.727722, -0.149588, -0.0374393 )
+
+[node name="house_type09" parent="Street 4/House 2" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0595961, -0.137331, -0.0457087 )
+
+[node name="tree_small" parent="Street 4/House 2" instance=ExtResource( 24 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.870944, -0.149587, -0.183102 )
+
+[node name="Grass" type="MeshInstance" parent="Street 4/House 2"]
+transform = Transform( 0.980522, 0, 0, 0, 0.00492775, 0, 0, 0, 0.407316, -0.071456, -0.135751, -0.0311632 )
+mesh = SubResource( 6 )
+material/0 = SubResource( 7 )
+
+[node name="House 3" type="StaticBody" parent="Street 4"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.309285, 0, -3.00249 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Street 4/House 3"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0188942, 0.495621, 0.308068 )
+shape = SubResource( 22 )
+
+[node name="house_type04" parent="Street 4/House 3" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.522108, 0.099999, -0.448071 )
+
+[node name="tree_small4" parent="Street 4/House 3" instance=ExtResource( 24 )]
+transform = Transform( -0.699951, 0, -0.716591, 0, 1.00172, 0, 0.716591, 0, -0.699951, -0.33894, 0.087742, 1.19769 )
+
+[node name="tree_small5" parent="Street 4/House 3" instance=ExtResource( 24 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0721297, 0.0877424, 0.835363 )
+
+[node name="tree_small6" parent="Street 4/House 3" instance=ExtResource( 24 )]
+transform = Transform( -0.698752, 0, -0.715364, 0, 1, 0, 0.715364, 0, -0.698752, 0.100014, 0.0903984, 1.23871 )
+
+[node name="fence_small" parent="Street 4/House 3" instance=ExtResource( 28 )]
+transform = Transform( 1.40398, 0, 0, 0, 1, 0, 0, 0, 2.9215, -0.113921, 0.0877424, 0.99127 )
+
+[node name="tree_large" parent="Street 4/House 3" instance=ExtResource( 23 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.182189, 0.0877417, -0.746729 )
+
+[node name="Grass" type="MeshInstance" parent="Street 4/House 3"]
+transform = Transform( -5.61671e-08, 0, 0.532167, 0, 0.00492775, 0, -1.28495, 0, -2.32618e-08, -0.112478, 0.0900946, 0.211066 )
+mesh = SubResource( 6 )
+material/0 = SubResource( 7 )
+
+[node name="Street 5" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8.23972, 0, 2.57214 )
+
+[node name="House 1" type="StaticBody" parent="Street 5"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.352368, 0, 5.59837 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Street 5/House 1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0344524, 0.449174, 0.438129 )
+shape = SubResource( 23 )
+
+[node name="house_type05" parent="Street 5/House 1" instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00572395, 0.1, 0.366934 )
+
+[node name="fence_large" parent="Street 5/House 1" instance=ExtResource( 29 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0316315, 0.087742, 1.20816 )
+
+[node name="Grass" type="MeshInstance" parent="Street 5/House 1"]
+transform = Transform( 0.567854, 0, 0, 0, 0.00492775, 0, 0, 0, 1.08895, 0.0228872, 0.0952747, 0.675443 )
+mesh = SubResource( 6 )
+material/0 = SubResource( 7 )
+
+[node name="House 2" type="StaticBody" parent="Street 5"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.426351, 0, 0.944188 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Street 5/House 2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0688772, 0.5801, 0 )
+shape = SubResource( 24 )
+
+[node name="house_type20" parent="Street 5/House 2" instance=ExtResource( 18 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0809689, 0.088, 0.600649 )
+
+[node name="house_type23" parent="Street 5/House 2" instance=ExtResource( 18 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0953188, 0.100009, -0.587121 )
+
+[node name="tree_large" parent="Street 5/House 2" instance=ExtResource( 23 )]
+transform = Transform( 1, 0, 0, 0, 0.99998, 0.00635296, 0, -0.00635296, 0.99998, -0.231954, 0.0877424, 2.06437 )
+
+[node name="fence_large2" parent="Street 5/House 2" instance=ExtResource( 29 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0671911, 0.087742, 1.58767 )
+
+[node name="fence_large3" parent="Street 5/House 2" instance=ExtResource( 29 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, -1, -0.0812941, 0.087742, -1.5642 )
+
+[node name="tree_small" parent="Street 5/House 2" instance=ExtResource( 24 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8.67844e-05, 0.0877424, 1.73252 )
+
+[node name="tree_large3" parent="Street 5/House 2" instance=ExtResource( 23 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.278533, 0.0877424, -1.61533 )
+
+[node name="tree_large4" parent="Street 5/House 2" instance=ExtResource( 23 )]
+transform = Transform( 1, 0, 0, 0, 0.99998, 0.00635296, 0, -0.00635296, 0.99998, -0.232768, 0.0877424, -1.41174 )
+
+[node name="Grass" type="MeshInstance" parent="Street 5/House 2"]
+transform = Transform( 0.556246, 0, 0, 0, 0.00492775, 0, 0, 0, 2.18241, -0.0633039, 0.0904527, 0.0139313 )
+mesh = SubResource( 6 )
+material/0 = SubResource( 7 )
+
+[node name="House 3" type="StaticBody" parent="Street 5"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00119114, 0.0874699, -5.31109 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Street 5/House 3"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.303291, 0.64821, 0.658862 )
+shape = SubResource( 25 )
+
+[node name="house_type15" parent="Street 5/House 3" instance=ExtResource( 15 )]
+transform = Transform( -0.0203143, 0, -0.999794, 0, 1, 0, 0.999794, 0, -0.0203143, 0.428528, 0.0125301, 1.00658 )
+
+[node name="house_type16" parent="Street 5/House 3" instance=ExtResource( 21 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.31082, 0.0125301, -0.436993 )
+
+[node name="tree_large2" parent="Street 5/House 3" instance=ExtResource( 23 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0325222, 0.00027249, 1.74699 )
+
+[node name="fence_wide" parent="Street 5/House 3" instance=ExtResource( 25 )]
+transform = Transform( -9.18721e-08, 0, 2.36248, 0, 1, 0, -2.10179, 0, -1.03267e-07, 0.692562, 0.00027249, 0.653656 )
+
+[node name="Grass" type="MeshInstance" parent="Street 5/House 3"]
+transform = Transform( 0.607226, 0, 0, 0, 0.00492775, 0, 0, 0, 1.62608, 0.485842, 0.00892878, 0.663811 )
+mesh = SubResource( 6 )
+material/0 = SubResource( 7 )
+
+[node name="Wall" type="StaticBody" parent="Street 5"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4831, 0.330449, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Street 5/Wall"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.57533, 0.149022, -2.33597 )
+shape = SubResource( 26 )
+
+[node name="Road" type="Spatial" parent="."]
+
+[node name="driveway_long" parent="Road" instance=ExtResource( 30 )]
+transform = Transform( 5.318, 0, 0, 0, 1, 0, 0, 0, 39, -6.01877, 0.0877422, 2.26676 )
+
+[node name="driveway_long2" parent="Road" instance=ExtResource( 30 )]
+transform = Transform( 5.318, 0, 0, 0, 1, 0, 0, 0, 39, -1.76504, 0.0877422, 2.42572 )
+
+[node name="driveway_long3" parent="Road" instance=ExtResource( 30 )]
+transform = Transform( 5.318, 0, 0, 0, 1, 0, 0, 0, 39, 2.61089, 0.0877422, 2.23864 )
+
+[node name="driveway_long5" parent="Road" instance=ExtResource( 30 )]
+transform = Transform( 5.318, 0, 0, 0, 1, 0, 0, 0, 39, 6.81065, 0.0877422, 2.10918 )
+
+[node name="driveway_long6" parent="Road" instance=ExtResource( 30 )]
+transform = Transform( -2.18557e-07, 0, 48.9308, 0, 1, 0, -5, 0, -2.13883e-06, -0.0792952, 0.0877422, 6.56366 )
+
+[node name="driveway_long7" parent="Road" instance=ExtResource( 30 )]
+transform = Transform( -2.18557e-07, 0, 40.7632, 0, 1, 0, -5, 0, -1.78181e-06, -1.73518, 0.0877422, 2.76961 )
+
+[node name="driveway_long8" parent="Road" instance=ExtResource( 30 )]
+transform = Transform( -2.18557e-07, 0, 40.7632, 0, 1, 0, -5, 0, -1.78181e-06, -1.73518, 0.0877422, -1.93093 )
+
+[node name="driveway_long9" parent="Road" instance=ExtResource( 30 )]
+transform = Transform( -2.18557e-07, 0, 8.2328, 0, 1, 0, -5, 0, -3.59867e-07, 8.2824, 0.0877422, 0.442353 )
+
+[node name="Ground" type="MeshInstance" parent="Road"]
+transform = Transform( 10, 0, 0, 0, 0.1, 0, 0, 0, 10, -0.0011735, -0.0117054, 0.0706191 )
+mesh = SubResource( 27 )
+material/0 = SubResource( 28 )
+
+[connection signal="pressed" from="Control/Space Button" to="Control" method="_on_Space_Button_pressed"]
+[connection signal="button_down" from="Control/Camera Control/Plus Button" to="Control" method="_on_Plus_Button_down"]
+[connection signal="button_down" from="Control/Camera Control/Minus Button" to="Control" method="_on_Minus_Button_down"]
+[connection signal="body_entered" from="Recycling Plant/Area" to="Recycling Plant/Area" method="_on_dumpArea_body_entered"]
